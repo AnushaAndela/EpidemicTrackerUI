@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Patient</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+       <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+<link rel="stylesheet" href="/DiseaseForm/style.css">
+    </head>
+    <body style="background-color:powderblue;">
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <form method="POST" action="#" role="form" name="patientform" id="postData" onsubmit="return(validate());">
+                            <div class="form-group">
+                                <h2 align="center">Patient Form</h2>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="control-label" for="patientName">Name</label>
+                                <input id="name" type="text" name="name" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="patientAge">Age</label>
+                                <input id="age" type="number" name="age" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="patientGender">Gender</label>
+                                <select id="gender" maxlength="50" class="form-control" >
+                                  <option value="Male">Male</option>
+                                  <option value="Female">Female</option>
+                                  <option value="Others">Others</option>
+                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="patientPhone">Phone</label>
+                                <input id="phone" type="number" name="phone" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="patientAadharId">AadharId</label>
+                                <input id="aadharid" type="number" name="aadharid" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="patientAddressType">AddressType</label>
+                                <select id="addresstype" maxlength="50" class="form-control">
+                                  <option value="Permanant">Permanant</option>
+                                  <option value="Current">Current</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="patientHno">Hno</label>
+                                <input id="hno" type="text" name="hno" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="patientStreet">Street</label>
+                                <input id="street" type="text" name="street" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientCity">City</label>
+                              <input id="city" type="text" name="city" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientState">State</label>
+                              <input id="state" type="text" name="state" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientCountry">Country</label>
+                              <input id="country" type="text" name="country" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientPincode">Pincode</label>
+                              <input id="pincode" type="number" name="pincode" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientOccupation">Occupation Name</label>
+                              <input id="occname" type="text" name="occname" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientOccPhone">Phone</label>
+                              <input id="occphone" type="number" name="occphone" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientOccStreetno">Streetno</label>
+                              <input id="occstreetno" type="text" name="occstreetno" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientOccArea">Area</label>
+                              <input id="occarea" type="text" name="occarea" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientOccCity">City</label>
+                              <input id="occcity" type="text" name="occcity" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientOccState">State</label>
+                              <input id="occstate" type="text" name="occstate" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientOccCountry">Country</label>
+                              <input id="occcountry" type="text" name="occcountry" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientOccPin">Pincode</label>
+                              <input id="occpincode" type="number" name="occpincode" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientTreatmentAdmitDate">AdmittedDate</label>
+                              <input id="admitteddate" type="datetime-local" name="admitteddate" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientPercentage">Percentagecure</label>
+                              <input id="percentagecure" type="number" name="percentagecure" maxlength="50" min="0"  step="1.0" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientRelievingDate">RelievingDate</label>
+                              <input id="relievingdate" type="datetime-local" name="relievingdate" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientIsAffected">IsAffected</label>
+                              <select id="isaffected" maxlength="50" class="form-control">
+                                <option value="Yes">YES</option>
+                                <option value="No">NO</option>  
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientIsFatility">IsFatility</label>
+                              <select id="isfatility" maxlength="50" class="form-control">
+                                <option value="Yes">YES</option>
+                                <option value="No">NO</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientDisease">Disease</label>
+                              <select id="disease-dropdown"  name="disease" maxlength="50" class="form-control"> </select>
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="patientIsAffected">Hospital</label>
+                              <select id="hospital-dropdown"  name="hospital" maxlength="50" class="form-control"> </select>
+                            </div>
+
+                        
+                            <div class="form-group">
+                                <input  id="submit" type="submit" value="Submit" class="btn btn-info btn-block"/>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/PatientForm/Script.js"></script>
+    </body>
+</html>

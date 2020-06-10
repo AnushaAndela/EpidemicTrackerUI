@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Disease</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+<link rel="stylesheet" href="/DiseaseForm/style.css">
+
+    </head>
+    <body style="background-color:powderblue;">
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <form method="POST" action="#" role="form" name="diseaseform" id="loginData" onsubmit="return(Diseasevalidate());">
+                            <div class="form-group">
+                                <h2 align="center">Disease Form</h2>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="diseaseType">Your name</label>
+                                <select id="mySelect"  class="form-control">
+                                    <option value="infectious">Infectious</option>
+                                    <option value="hereditary ">Hereditary</option>
+                                    <option value="physiological">Physiological</option>
+                                    <option value="deficiency">Deficiency</option></select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="diseaseName">Disease Name</label>
+                                <input id="diseasename" type="text" name="name" maxlength="50" class="form-control">
+                            </div>
+                        
+                            <div class="form-group">
+                                <input  id="submit" type="submit" value="Submit" class="btn btn-info btn-block"/>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/DiseaseForm/Script.js"></script>
+    </body>
+</html>

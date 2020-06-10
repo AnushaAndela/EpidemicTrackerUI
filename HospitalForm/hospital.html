@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Disease</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+<link rel="stylesheet" href="/HospitalForm/style.css">
+    </head>
+    <body style="background-color:powderblue;">
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <form method="POST" action="#" role="form" name="hospitalform" id="hospitalData" onsubmit="return(validateHospital());">
+                            <div class="form-group">
+                                <h2 align="center">Hospital Form</h2>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="control-label" for="hospitalName">Name</label>
+                                <input id="hname" type="text" name="name" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="hospitalPhone">Phone</label>
+                                <input id="hphone" type="number" name="phone" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="hospitalStreetNo">StreetNo</label>
+                                <input id="hstreetno" type="text" name="streetno" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="hospitalArea">Area</label>
+                                <input id="harea" type="text" name="area" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="hospitalCity">City</label>
+                                <input id="hcity" type="text" name="city" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="hospitalState">State</label>
+                                <input id="hstate" type="text" name="state" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="hospitalCountry">Country</label>
+                                <input id="hcountry" type="text" name="country" maxlength="50" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="hospitalPincode">Pincode</label>
+                                <input id="hpincode" type="number" name="pincode" maxlength="50" class="form-control">
+                            </div>
+                        
+                            <div class="form-group">
+                                <input  id="submit" type="submit" value="Submit" class="btn btn-info btn-block"/>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/HospitalForm/Script.js"></script>
+    </body>
+</html>

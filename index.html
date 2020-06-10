@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!-- Bootstrap core JavaScript -->
+   <script src="vendor/jquery/jquery.min.js"></script>
+   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+ 
+ <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.8/css/jquery.dataTables.min.css">
+<!-- Include the above in your HEAD tag -->
+
+
+<link rel="stylesheet" href="style.css">
+
+
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  
+  <nav class="navbar navbar-default navbar-expand-lg navbar-light">
+    <div class="navbar-header d-flex col">
+      <a class="navbar-brand" href="#">Epidemic Tracker</a>  		
+      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+        <span class="navbar-toggler-icon"></span>
+        
+      </button>
+    </div>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+      
+      
+      <ul class="nav navbar-nav navbar-right ml-auto">			
+        <li class="nav-item">
+          <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
+          <ul class="dropdown-menu form-wrapper">					
+            <li>
+              <form method="POST" action="#" role="form" name="loginform" id="loginData"  >
+                <p class="hint-text">Sign in with your social media account</p>
+                <div class="form-group social-btn clearfix">
+                  <a href="https://www.facebook.com/" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
+                  <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
+                </div>
+                <div class="or-seperator"><b>or</b></div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Username" id="username" required="required">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password" id="password" required="required">
+                </div>
+                <input  id="submit" type="submit" value="Submit" class="btn btn-info btn-block"/>
+                <div class="form-footer">
+                  <a href="#">Forgot Your password?</a>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Content section -->
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="dbox dbox--color-2">
+            
+            <div class="dbox__body">
+              <span class="dbox__count" id="uncured"></span>
+              <span class="dbox__title"></span>
+            </div>
+            <div class="dbox__action">
+              <button class="dbox__action__btn" id="activebtn" onclick='myfunctionuncured(); '>Active</button>
+            </div>	
+                    
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dbox dbox--color-3">
+           
+            <div class="dbox__body">
+              <span class="dbox__count" id="cured"></span>
+              <span class="dbox__title"></span>
+            </div>
+            
+            <div class="dbox__action">
+              <button  class="dbox__action__btn" id="curedbtn" onclick='myfunction();'>Cured</button>
+            </div>				
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dbox dbox--color-4">
+            
+            <div class="dbox__body">
+              <span class="dbox__count" id="death"></span>
+              <span class="dbox__title"></span>
+            </div>
+            
+            <div class="dbox__action">
+              <button  class="dbox__action__btn" id="deathbtn" onclick='myfunctionfatility();'>Deaths</button>
+            </div>				
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="table-responsive">
+          <table id="table_one" class="table table-bordered"   width="100%">
+            <thead>
+                <tr align="center">
+                </tr>
+            </thead>
+            <tbody></tbody>
+            
+        </table> </div>
+    
+        <div class="table-responsive">
+          <table id="table_two" class="table table-bordered"   width="100%">
+            <thead>
+                <tr align="center">  
+                   
+                </tr>
+            </thead>
+            <tbody></tbody>
+            
+        </table> </div>
+        <div class="table-responsive">
+          <table id="table_three" class="table table-bordered"   width="100%">
+            <thead>
+                <tr align="center">
+                  
+                   
+                </tr>
+            </thead>
+            <tbody></tbody>
+            
+        </table> </div>
+
+    </div>
+    
+   
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <script type="text/javascript" src="script.js"></script>
+ 
+</body>
+
+</html>

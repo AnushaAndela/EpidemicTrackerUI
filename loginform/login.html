@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+
+ <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.8/css/jquery.dataTables.min.css">
+<!-- Include the above in your HEAD tag -->
+
+
+<link rel="stylesheet" href="/loginform/style.css">
+
+
+
+
+</head>
+
+<body style="background-color:powderblue;">
+
+  <!-- Navigation -->
+  
+  <nav class="navbar navbar-default navbar-expand-lg navbar-light ">
+    <div class="navbar-header d-flex col">
+      <a class="navbar-brand" href="#">Epidemic Tracker</a>  		
+      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        
+      </button>
+    </div>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#patient">Patient</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#hospital">Hospital</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#disease">Disease</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right ml-auto">			
+        <li class="nav-item">
+          <input type="submit" class="btn btn-primary btn-block" id="btnLogout" onclick="logoutFunct();" value="Logout" style="background-color: lightblue;
+          border: none;
+          color: white;
+          padding: 10px 15px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;" >
+         
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+  
+  
+  
+  <!-- Content section -->
+  <div class="tab-content">
+    <div id="patient" class="tab-pane fade "></div>
+    
+
+    <div id="hospital" class="tab-pane fade">
+      
+    </div>
+    <div id="disease" class="tab-pane fade">
+    </div>
+  </div>
+  
+
+  
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <script src="/loginform/script.js"></script>
+</body>
+
+</html>
