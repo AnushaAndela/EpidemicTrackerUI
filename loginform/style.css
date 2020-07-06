@@ -1,16 +1,161 @@
-
-  button {
-    background-color: #4CAF50;
-    color: lightblue;
-    padding: 20px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
+@import 'https://fonts.googleapis.com/css?family=Prompt:400,700';
+.btn {
+    display:inline-block;
+    margin-right:5px;
+ }
+ .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: powderblue;
+    color: Black;
+    text-align: center;
+ }
+.bs-example{
+    margin: 20px;
+}
+.delete {
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  .delete:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: center;
+    
+    margin-right: -8px;
+  }
+  .modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    right:0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(22, 22, 22); /* Fallback color */
+    background-color:rgba(30, 31, 31, 0.8); /* Black w/ opacity */
+    padding-top: 40px;
     
     
   }
-
   
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    
+  }
+  
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    width: 800px;
+    
+    
+  }
+  body {
+    font-family: 'Varela Round', sans-serif;
+}
+.modal-confirm {		
+    color: #636363;
+    width: 400px;
+}
+.modal-backdrop { z-index: -999999; }
+.modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+.modal-confirm .modal-header {
+    border-bottom: none;   
+    position: relative;
+}
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -10px;
+}
+.modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+}
+.modal-confirm .modal-body {
+    color: #999;
+}
+.modal-confirm .modal-footer {
+    border: none;
+    text-align: center;		
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 25px;
+}
+.modal-confirm .modal-footer a {
+    color: #999;
+}		
+.modal-confirm .icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 9;
+    text-align: center;
+    border: 3px solid #f15e5e;
+}
+.modal-confirm .icon-box i {
+    color: #f15e5e;
+    font-size: 46px;
+    display: inline-block;
+    margin-top: 13px;
+}
+.modal-confirm .btn {
+    color: #fff;
+    border-radius: 4px;
+    background: #60c7c1;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    min-width: 120px;
+    border: none;
+    min-height: 40px;
+    border-radius: 3px;
+    margin: 0 5px;
+    outline: none !important;
+}
+.modal-confirm .btn-info {
+    background: #c1c1c1;
+}
+.modal-confirm .btn-info:hover, .modal-confirm .btn-info:focus {
+    background: #a8a8a8;
+}
+.modal-confirm .btn-danger {
+    background: #f15e5e;
+    
+}
+.modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+    background: #ee3535;
+}
+.trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+}
+@media screen and (min-width: 992px) {
+    .modal-lg {
+      width: 950px; /* New width for large modal */
+    }
+}
 
   
   button:hover {
@@ -46,27 +191,6 @@
   }
   
   /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
   
   /* The Close Button (x) */
   .close {
@@ -235,6 +359,13 @@
 .navbar .navbar-brand b {
     font-weight: bold;
     color: #33cabb;		
+}
+.navbar {
+    background:whitesmoke;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-bottom: 1px solid #dfe3e8;
+    border-radius: 0;
 }
 .navbar .form-inline {
     display: inline-block;

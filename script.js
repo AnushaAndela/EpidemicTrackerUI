@@ -77,26 +77,9 @@ $(document).ready(function(){
   })
   .then(function(data){
     var table=$('#table_one').DataTable({
-      initComplete: function () {
-        this.api().columns().every( function () {
-            var column = this;
-            var select = $('<select><option value=""></option></select>')
-                .appendTo( $(column.footer()).empty() )
-                .on( 'change', function () {
-                    var val = $.fn.dataTable.util.escapeRegex(
-                        $(this).val()
-                    );
-
-                    column
-                        .search( val ? '^'+val+'$' : '', true, false )
-                        .draw();
-                } );
-
-            column.data().unique().sort().each( function ( d, j ) {
-                select.append( '<option value="'+d+'">'+d+'</option>' )
-            } );
-        } );
-    },
+      "paging":true,
+      "PaginationType":"full_numbers",
+      fixedHeader: true,
       data:data,
       "columns":[
         {title: 'Patient Name',data:"patientDto.name"},
@@ -109,7 +92,17 @@ $(document).ready(function(){
       ]
 
     })
+    var visible = true;
+    var tableContainer = $(table.table().container());
+ 
+    $('#curedbtn').on( 'click', function () {
+        tableContainer.css( 'display', visible ? 'none' : 'block' );
+        table.fixedHeader.adjust();
+ 
+        visible = ! visible;
+    } );
   })
+   
 });
 }
 
@@ -158,28 +151,9 @@ $(document).ready(function(){
   
     var table=$('#table_two').DataTable({
       
-      initComplete: function () {
-        this.api().columns().every( function () {
-            var column = this;
-            var select = $('<select><option value=""></option></select>')
-                .appendTo( $(column.footer()).empty() )
-                .on( 'change', function () {
-                    var val = $.fn.dataTable.util.escapeRegex(
-                        $(this).val()
-                    );
-
-                    column
-                        .search( val ? '^'+val+'$' : '', true, false )
-                        .draw();
-                } );
-
-            column.data().unique().sort().each( function ( d, j ) {
-                select.append( '<option value="'+d+'">'+d+'</option>' )
-            } );
-            
-            
-        } );
-    },
+      fixedHeader: true,
+      "paging":true,
+      "PaginationType":"full_numbers",
       data:data,
       "columns":[
         {title: 'Patient Name',data:"patientDto.name"},
@@ -194,6 +168,16 @@ $(document).ready(function(){
       ]
 
     })
+   
+    var visible = true;
+    var tableContainer = $(table.table().container());
+ 
+    $('#activebtn').on( 'click', function () {
+        tableContainer.css( 'display', visible ? 'none' : 'block' );
+        table.fixedHeader.adjust();
+ 
+        visible = ! visible;
+    } );
   })
 });
 }
@@ -237,26 +221,9 @@ $(document).ready(function(){
   })
   .then(function(data){
     var table=$('#table_three').DataTable({
-      initComplete: function () {
-        this.api().columns().every( function () {
-            var column = this;
-            var select = $('<select><option value=""></option></select>')
-                .appendTo( $(column.footer()).empty() )
-                .on( 'change', function () {
-                    var val = $.fn.dataTable.util.escapeRegex(
-                        $(this).val()
-                    );
-
-                    column
-                        .search( val ? '^'+val+'$' : '', true, false )
-                        .draw();
-                } );
-
-            column.data().unique().sort().each( function ( d, j ) {
-                select.append( '<option value="'+d+'">'+d+'</option>' )
-            } );
-        } );
-    },
+      fixedHeader: true,
+      "paging":true,
+      "PaginationType":"full_numbers",
       data:data,
       
       "columns":[
@@ -270,6 +237,15 @@ $(document).ready(function(){
       ]
 
     })
+    var visible = true;
+    var tableContainer = $(table.table().container());
+ 
+    $('#deathbtn').on( 'click', function () {
+        tableContainer.css( 'display', visible ? 'none' : 'block' );
+        table.fixedHeader.adjust();
+ 
+        visible = ! visible;
+    } );
   })  
 });
 

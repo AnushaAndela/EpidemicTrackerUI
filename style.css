@@ -16,7 +16,15 @@ input[type=text], input[type=password] {
     
     
   }
-  
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: powderblue;
+    color: Black;
+    text-align: center;
+ }
   button:hover {
     opacity: 0.8;
   }
