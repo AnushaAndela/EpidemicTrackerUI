@@ -112,7 +112,7 @@
                     <a href="#" class="close" data-dismiss="modal">&times;</a>
                 </div>
                 <div class="modal-body" id="myModalBodyDiv"  >
-                    <form method="POST" action="#" role="form" name="patientform" id="postData"  >
+                    <form method="POST" action="#" role="form" name="patientform" id="postData" onsubmit="return(validate()); " >
                         <div class="form-group">
                             
                         </div>
@@ -291,7 +291,7 @@
           
       </table> 
       
-  <div class="modal fade" id="addHospitalModal" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel" >
+  <div class="modal fade" id="addHospitalModal" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static" >
       <div class="modal-dialog modal-dialog-centered modal-md myModalDialog " role="document">
           <div class="modal-content">
               <div class="modal-header">
@@ -394,7 +394,7 @@
             
         </table> 
         
-    <div class="modal fade" id="addDiseaseModal" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel" >
+    <div class="modal fade" id="addDiseaseModal" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static" >
         <div class="modal-dialog modal-dialog-centered modal-md " role="document">
             <div class="modal-content">
                 <div class="modal-header">

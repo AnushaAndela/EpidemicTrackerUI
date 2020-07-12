@@ -673,4 +673,155 @@ function deleteDiseaseClick (obj) {
   $('#deletedisease').modal('show');
   
 }
+  function validate()
+{ 
+  if( document.patientform.name.value == "" )
+  {
+    alert( "Please enter Patient Name!" );
+    document.patientform.name.focus() ;
+    return false;
+  }
+  if( document.patientform.age.value == "" )
+  {
+    alert( "Please provide your Age!" );
+    document.patientform.age.focus() ;
+    return false;
+  }
+  if( document.patientform.gender.value == "" )
+  {
+    alert( "Please select Gender!" );
+    document.patientform.name.focus() ;
+    return false;
+  }
+  if( document.patientform.phone.value == "" ||
+  isNaN( document.patientform.phone.value) ||
+  document.patientform.phone.value.length != 10 )
+{
+alert( "Please provide a Mobile No in the format 123." );
+document.hospitalform.phone.focus() ;
+return false;
+}
+  var aadharpattern=/^\d{16}$/;
+  if( document.patientform.aadharId.value == "" )
+  {
+    if(!(document.patientform.phone.value.match(aadharpattern)))
+    {
+    alert( "Please enter AadharId!" );
+    document.patientform.aadharId.focus() ;
+    return false;
+    }
+  }
+  if( document.patientform.addresstype.value == "" )
+  {
+    alert( "Please enter addresstype!" );
+    document.patientform.addresstype.focus() ;
+    return false;
+  }
+  if( document.patientform.hno.value == "" )
+  {
+    alert( "Please enter hno!" );
+    document.patientform.hno.focus() ;
+    return false;
+  }
+  if( document.patientform.street.value == "" )
+  {
+    alert( "Please enter Street!" );
+    document.patientform.street.focus() ;
+    return false;
+  }
+  if( document.patientform.city.value == "" )
+  {
+    alert( "Please enter City!" );
+    document.patientform.city.focus() ;
+    return false;
+  }
+  if( document.patientform.state.value == "" )
+  {
+    alert( "Please enter State!" );
+    document.patientform.state.focus() ;
+    return false;
+  }
+  if( document.patientform.country.value == "" )
+  {
+    alert( "Please enter Country!" );
+    document.patientform.country.focus() ;
+    return false;
+  }
+  if( document.patientform.pincode.value == "" || isNaN( document.patientform.pincode.value) ||
+  document.patientform.pincode.value.length != 6  )
+  {
+    alert( "Please enter Pincode!" );
+    document.patientform.pincode.focus() ;
+    return false;
+  }
+  if( document.patientform.occname.value == "" )
+  {
+    alert( "Please enter Occupation name!" );
+    document.patientform.occname.focus() ;
+    return false;
+  }
   
+  if( document.patientform.occstreetno.value == "" )
+  {
+    alert( "Please enter Streetno!" );
+    document.patientform.occstreetno.focus() ;
+    return false;
+  }
+  if( document.patientform.occarea.value == "" )
+  {
+    alert( "Please enter Occupation area!" );
+    document.patientform.occarea.focus() ;
+    return false;
+  }
+  if( document.patientform.occcity.value == "" )
+  {
+    alert( "Please enter Occupation city!" );
+    document.patientform.occcity.focus() ;
+    return false;
+  }
+  if( document.patientform.occstate.value == "" )
+  {
+    alert( "Please enter Occupation state!" );
+    document.patientform.occstate.focus() ;
+    return false;
+  }
+  if( document.patientform.occcountry.value == "" )
+  {
+    alert( "Please enter Occupation country!" );
+    document.patientform.occcountry.focus() ;
+    return false;
+  }
+  if( document.patientform.pincode.value == "" || isNaN( document.patientform.pincode.value) ||
+  document.patientform.pincode.value.length != 6  )
+  {
+    alert( "Please enter Occupation Pincode!" );
+    document.patientform.occpincode.focus() ;
+    return false;
+  }
+  if( document.patientform.admitteddate.value == "2020-05-25T12:44:41.913Z" )
+  {
+    alert( "Please enter Admitteddate in the given format!" );
+    document.patientform.admitteddate.focus() ;
+    return false;
+  }
+  if( document.patientform.percentagecure.value == "" )
+  {
+    alert( "Please enter Percentagecure!" );
+    document.patientform.occcountry.focus() ;
+    return false;
+  }
+  if( document.patientform.relievingdate.value == "2020-05-25T12:44:41.913Z" )
+  {
+    alert( "Please enter RelievingDate in the given format!" );
+    document.patientform.relievingdate.focus() ;
+    return false;
+  }
+  if( document.patientform.isfatility.value == "" )
+  {
+    alert( "Please enter IsFatility!" );
+    document.patientform.occcountry.focus() ;
+    return false;
+  }
+  
+  return true;
+}

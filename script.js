@@ -87,8 +87,8 @@ $(document).ready(function(){
         {title: 'PatientAge',data:"patientDto.age"},
         {title: 'AadharID',data:"patientDto.aadharId"},
         {title: 'Admitted Date',data:"admittedDate"},      
-        {title: 'Disease',data:"diseaseDto.name"},
-        {title: 'Hospital',data:"hospitalDto.name"}
+        {title: 'Disease',data:"diseaseDto.name"}
+        
       ]
 
     })
@@ -161,8 +161,8 @@ $(document).ready(function(){
         {title: 'PatientAge',data:"patientDto.age"},
         {title: 'AadharID',data:"patientDto.aadharId"},
         {title: 'Admitted Date',data:"admittedDate"},      
-        {title: 'Disease',data:"diseaseDto.name"},
-        {title: 'Hospital',data:"hospitalDto.name"}
+        {title: 'Disease',data:"diseaseDto.name"}
+       
        
 
       ]
@@ -232,8 +232,8 @@ $(document).ready(function(){
         {title: 'PatientAge',data:"patientDto.age"},
         {title: 'AadharID',data:"patientDto.aadharId"},
         {title: 'Admitted Date',data:"admittedDate"},      
-        {title: 'Disease',data:"diseaseDto.name"},
-        {title: 'Hospital',data:"hospitalDto.name"}
+        {title: 'Disease',data:"diseaseDto.name"}
+        
       ]
 
     })
